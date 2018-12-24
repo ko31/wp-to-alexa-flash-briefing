@@ -43,7 +43,6 @@ class Admin {
 
 	function endpoint_callback() {
 		?>
-		<p><code><?php echo esc_url( $endpoint ); ?></code></p>
 		<p><code><?php echo esc_url( get_rest_url( null, 'afbf/v1/briefings' ) ); ?></code></p>
 		<?php
 		if ( ! is_ssl() ) {
