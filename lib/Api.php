@@ -39,13 +39,13 @@ class Api {
 				'menu_name'             => __( 'Briefings', 'alexa-flash-briefing-feed' ),
 			],
 			'public'                => true,
-			'hierarchical'          => false,
-			'show_ui'               => true,
-			'show_in_nav_menus'     => true,
+//			'hierarchical'          => false,
+//			'show_ui'               => true,
+//			'show_in_nav_menus'     => true,
 			'supports'              => [ 'title', 'editor' ],
 			'has_archive'           => true,
-			'rewrite'               => true,
-			'query_var'             => true,
+//			'rewrite'               => true,
+//			'query_var'             => true,
 			'menu_icon'             => 'dashicons-controls-volumeon',
 			'show_in_rest'          => true,
 			'rest_base'             => 'briefing',
@@ -60,6 +60,16 @@ class Api {
 		$args = apply_filters( 'afbf_post_type_args', $args );
 
 		register_post_type( 'briefing', $args );
+
+		register_taxonomy(
+			'briefing-cat',
+			'briefing',
+			array(
+				'label'        => __( 'Category', 'alexa-flash-briefing-feed' ),
+				'hierarchical' => true,
+			)
+		);
+
 	}
 
 	function rest_api_init() {
@@ -69,12 +79,23 @@ class Api {
 		] );
 	}
 
-	function callback_api() {
+	function callback_api( $request ) {
 		$args = [
 			'post_type'   => 'briefing',
 			'post_status' => 'publish',
 			'numberposts' => 5,
 		];
+
+		if ( ! empty( $request['category'] ) ) {
+			$args['tax_query'] = [
+				[
+					'taxonomy' => 'briefing-cat',
+					'field'    => 'slug',
+					'terms'    => $request['category'],
+				]
+			];
+		}
+
 		/**
 		 * Filters the get posts arguments
 		 *
