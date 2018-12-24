@@ -42,13 +42,9 @@ class Admin {
 	}
 
 	function endpoint_callback() {
-		if ( empty( get_option( 'permalink_structure' ) ) ) {
-			$endpoint = home_url( '?rest_route=/afbf/v1/briefings' );
-		} else {
-			$endpoint = home_url( '/wp-json/afbf/v1/briefings' );
-		}
 		?>
 		<p><code><?php echo esc_url( $endpoint ); ?></code></p>
+		<p><code><?php echo esc_url( get_rest_url( null, 'afbf/v1/briefings' ) ); ?></code></p>
 		<?php
 		if ( ! is_ssl() ) {
 			?>
