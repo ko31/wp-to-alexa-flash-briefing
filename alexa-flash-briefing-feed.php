@@ -20,6 +20,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 require_once( dirname( __FILE__ ) . '/vendor/autoload.php' );
 
+register_activation_hook( __FILE__, function () {
+	flush_rewrite_rules();
+} )
+
 add_action( 'plugins_loaded', function () {
 
 	load_plugin_textdomain(
