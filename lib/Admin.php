@@ -43,13 +43,21 @@ class Admin {
 
 	function endpoint_callback() {
 		if ( empty( get_option( 'permalink_structure' ) ) ) {
-			$endpoint = home_url ('?rest_route=/afbf/v1/briefings');
+			$endpoint = home_url( '?rest_route=/afbf/v1/briefings' );
 		} else {
-			$endpoint = home_url ('/wp-json/afbf/v1/briefings');
+			$endpoint = home_url( '/wp-json/afbf/v1/briefings' );
 		}
 		?>
-		<code><?php echo esc_url( $endpoint ); ?></code>
+		<p><code><?php echo esc_url( $endpoint ); ?></code></p>
 		<?php
+		if ( ! is_ssl() ) {
+			?>
+			<p>
+				<span class="dashicons dashicons-warning" aria-hidden="true"></span>
+				<?php _e( 'SSL is recommended for endpoints.', 'alexa-flash-briefing-feed' ); ?>
+			</p>
+			<?php
+		}
 	}
 
 	function display() {
