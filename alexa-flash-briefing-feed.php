@@ -14,14 +14,19 @@
 
 namespace Alexa_Flash_Briefing_Feed;
 
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 require_once( dirname( __FILE__ ) . '/vendor/autoload.php' );
 
 add_action( 'plugins_loaded', function() {
 	if ( is_admin() ) {
 		$admin = new Admin();
 		$admin->activate();
-	} else {
-		do_redirect();
 	}
+	$api = new Api();
+	$api->register();
+//	do_redirect();
 } );
 
