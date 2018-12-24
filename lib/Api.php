@@ -5,7 +5,8 @@ namespace Alexa_Flash_Briefing_Feed;
 class Api {
 
 	function register() {
-		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'rest_api_init', [ $this, 'rest_api_init' ] );
 	}
 
 	function init() {
@@ -59,5 +60,50 @@ class Api {
 		$args = apply_filters( 'afbf_post_type_args', $args );
 
 		register_post_type( 'briefing', $args );
+	}
+
+	function rest_api_init() {
+		register_rest_route( 'afbf/v1', '/briefings/', [
+			'methods'  => 'GET',
+			'callback' => [ $this, 'callback_api' ],
+		] );
+	}
+
+	function callback_api() {
+		$args = [
+			'post_type'   => 'briefing',
+			'post_status' => 'publish',
+			'numberposts' => 5,
+		];
+		/**
+		 * Filters the get posts arguments
+		 *
+		 * @param array $args
+		 */
+		$args = apply_filters( 'afbf_get_posts_args', $args );
+
+		$posts = get_posts( $args );
+
+		if ( empty( $posts ) ) {
+			return new \WP_REST_Response();
+		}
+
+		$response = [];
+
+		foreach ( $posts as $post ) {
+			$mainText = wp_strip_all_tags( strip_shortcodes( $post->post_content, true ) );
+
+			$data       = [
+				'uid'            => sprintf( 'urn:uuid:%s', wp_generate_uuid4( get_permalink( $post ) ) ),
+				'updateDate'     => get_post_modified_time( 'Y-m-d\TH:i:s.\0\Z', true, $post ),
+				'titleText'      => $post->post_title,
+				'mainText'       => $mainText,
+				'streamUrl'      => '',
+				'redirectionUrl' => get_permalink( $post ),
+			];
+			$response[] = $data;
+		}
+
+		return new \WP_REST_Response( $response );
 	}
 }

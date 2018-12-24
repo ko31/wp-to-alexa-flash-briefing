@@ -5,8 +5,8 @@ namespace Alexa_Flash_Briefing_Feed;
 class Admin {
 
 	function activate() {
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-		add_action( 'admin_init', array( $this, 'admin_init' ) );
+		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		add_action( 'admin_init', [ $this, 'admin_init' ] );
 	}
 
 	function admin_menu() {
@@ -15,7 +15,7 @@ class Admin {
 			__( 'Alexa_Flash_Briefing_Feed', 'afbf' ),
 			'manage_options',
 			__( 'Alexa_Flash_Briefing_Feed', 'afbf' ),
-			array( $this, "display" )
+			[ $this, "display" ]
 		);
 	}
 
@@ -35,7 +35,7 @@ class Admin {
 		add_settings_field(
 			'endpoint',
 			__( 'Endpoint URL', 'afbf' ),
-			array( $this, 'endpoint_callback' ),
+			[ $this, 'endpoint_callback' ],
 			'alexa-flash-briefing-feed',
 			'basic_settings'
 		);
@@ -43,9 +43,9 @@ class Admin {
 
 	function endpoint_callback() {
 		if ( empty( get_option( 'permalink_structure' ) ) ) {
-			$endpoint = home_url( '?rest_route=wp/v2/posts/123' );
+			$endpoint = home_url ('?rest_route=/afbf/v1/briefings');
 		} else {
-			$endpoint = home_url( '/wp-json/wp/v2/posts/123' );
+			$endpoint = home_url ('/wp-json/afbf/v1/briefings');
 		}
 		?>
 		<code><?php echo esc_url( $endpoint ); ?></code>
