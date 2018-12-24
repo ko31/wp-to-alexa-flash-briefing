@@ -11,10 +11,10 @@ class Admin {
 
 	function admin_menu() {
 		add_options_page(
-			__( 'Alexa_Flash_Briefing_Feed', 'afbf' ),
-			__( 'Alexa_Flash_Briefing_Feed', 'afbf' ),
+			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
+			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
 			'manage_options',
-			__( 'Alexa_Flash_Briefing_Feed', 'afbf' ),
+			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
 			[ $this, "display" ]
 		);
 	}
@@ -27,14 +27,14 @@ class Admin {
 
 		add_settings_section(
 			'basic_settings',
-			__( 'Basic Settings', 'afbf' ),
+			__( 'Basic Settings', 'alexa-flash-briefing-feed' ),
 			null,
 			'alexa-flash-briefing-feed'
 		);
 
 		add_settings_field(
 			'endpoint',
-			__( 'Endpoint URL', 'afbf' ),
+			__( 'Endpoint URL', 'alexa-flash-briefing-feed' ),
 			[ $this, 'endpoint_callback' ],
 			'alexa-flash-briefing-feed',
 			'basic_settings'
@@ -54,7 +54,7 @@ class Admin {
 
 	function display() {
 		?>
-		<h1><?php _e( 'Alexa_Flash_Briefing_Feed', 'afbf' ); ?></h1>
+		<h1><?php _e( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ); ?></h1>
 		<?php
 		settings_fields( 'alexa-flash-briefing-feed' );
 		do_settings_sections( 'alexa-flash-briefing-feed' );

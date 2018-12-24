@@ -1,11 +1,11 @@
-# Copyright (C) 2018 YOUR NAME HERE
+# Copyright (C) 2018 ko31
 # This file is distributed under the same license as the Alexa Flash Briefing Feed package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Alexa Flash Briefing Feed 0.1.0\n"
+"Project-Id-Version: Alexa Flash Briefing Feed 0.9.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/alexa-flash-briefing-feed\n"
-"POT-Creation-Date: 2018-12-23 20:42:54+00:00\n"
+"POT-Creation-Date: 2018-12-24 02:41:53+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,12 +25,148 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
+#: lib/Admin.php:14 lib/Admin.php:15 lib/Admin.php:17 lib/Admin.php:57
+msgid "Alexa_Flash_Briefing_Feed"
+msgstr ""
+
+#: lib/Admin.php:30
+msgid "Basic Settings"
+msgstr ""
+
+#: lib/Admin.php:37
+msgid "Endpoint URL"
+msgstr ""
+
+#: lib/Api.php:15 lib/Api.php:39 wp-alexa-flash-briefing.php:34
+msgid "Briefings"
+msgstr ""
+
+#: lib/Api.php:16 wp-alexa-flash-briefing.php:35 wp-alexa-flash-briefing.php:67
+msgid "Briefing"
+msgstr ""
+
+#: lib/Api.php:17 wp-alexa-flash-briefing.php:39
+msgid "All Briefings"
+msgstr ""
+
+#: lib/Api.php:18 wp-alexa-flash-briefing.php:36
+msgid "Briefing Archives"
+msgstr ""
+
+#: lib/Api.php:19 wp-alexa-flash-briefing.php:37
+msgid "Briefing Attributes"
+msgstr ""
+
+#: lib/Api.php:20
+msgid "Insert into Briefing"
+msgstr ""
+
+#: lib/Api.php:21
+msgid "Uploaded to this Briefing"
+msgstr ""
+
+#: lib/Api.php:26
+msgid "Filter Briefings list"
+msgstr ""
+
+#: lib/Api.php:27 wp-alexa-flash-briefing.php:57
+msgid "Briefings list navigation"
+msgstr ""
+
+#: lib/Api.php:28 wp-alexa-flash-briefing.php:56
+msgid "Briefings list"
+msgstr ""
+
+#: lib/Api.php:29 wp-alexa-flash-briefing.php:42
+msgid "New Briefing"
+msgstr ""
+
+#: lib/Api.php:30 wp-alexa-flash-briefing.php:41
+msgid "Add New"
+msgstr ""
+
+#: lib/Api.php:31 wp-alexa-flash-briefing.php:40
+msgid "Add New Briefing"
+msgstr ""
+
+#: lib/Api.php:32 wp-alexa-flash-briefing.php:43
+msgid "Edit Briefing"
+msgstr ""
+
+#: lib/Api.php:33 wp-alexa-flash-briefing.php:45
+msgid "View Briefing"
+msgstr ""
+
+#: lib/Api.php:34 wp-alexa-flash-briefing.php:46
+msgid "View Briefings"
+msgstr ""
+
+#: lib/Api.php:35 wp-alexa-flash-briefing.php:47
+msgid "Search Briefings"
+msgstr ""
+
+#: lib/Api.php:36
+msgid "No Briefings found"
+msgstr ""
+
+#: lib/Api.php:37
+msgid "No Briefings found in trash"
+msgstr ""
+
+#: lib/Api.php:38 wp-alexa-flash-briefing.php:38
+msgid "Parent Briefing:"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:44
+msgid "Update Briefing"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:48
+msgid "Not found"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:49
+msgid "Not found in Trash"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:50
+msgid "Featured Image"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:51
+msgid "Set featured image"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:52
+msgid "Remove featured image"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:53
+msgid "Use as featured image"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:54
+msgid "Insert into briefing"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:55
+msgid "Uploaded to this briefing"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:58
+msgid "Filter briefings list"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:68
+msgid "Alexa flash briefing"
+msgstr ""
+
 #. Plugin Name of the plugin/theme
 msgid "Alexa Flash Briefing Feed"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "PLUGIN SITE HERE"
+msgid "https://github.com/ko31/alexa-flash-briefing-feed"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -38,9 +174,39 @@ msgid "PLUGIN DESCRIPTION HERE"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "YOUR NAME HERE"
+msgid "ko31"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "YOUR SITE HERE"
+msgid "https://go-sign.info"
+msgstr ""
+
+#: lib/Api.php:22
+msgctxt "briefing"
+msgid "Featured Image"
+msgstr ""
+
+#: lib/Api.php:23
+msgctxt "briefing"
+msgid "Set featured image"
+msgstr ""
+
+#: lib/Api.php:24
+msgctxt "briefing"
+msgid "Remove featured image"
+msgstr ""
+
+#: lib/Api.php:25
+msgctxt "briefing"
+msgid "Use as featured image"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:32
+msgctxt "Post Type General Name"
+msgid "Briefings"
+msgstr ""
+
+#: wp-alexa-flash-briefing.php:33
+msgctxt "Post Type Singular Name"
+msgid "Briefing"
 msgstr ""
