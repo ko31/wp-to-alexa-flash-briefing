@@ -11,10 +11,10 @@ class Admin {
 
 	function admin_menu() {
 		add_options_page(
-			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
-			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
+			__( 'Alexa Flash Briefing Feed', 'alexa-flash-briefing-feed' ),
+			__( 'Alexa Flash Briefing Feed', 'alexa-flash-briefing-feed' ),
 			'manage_options',
-			__( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ),
+			__( 'Alexa Flash Briefing Feed', 'alexa-flash-briefing-feed' ),
 			[ $this, "display" ]
 		);
 	}
@@ -54,7 +54,7 @@ class Admin {
 
 	function display() {
 		?>
-		<h1><?php _e( 'Alexa_Flash_Briefing_Feed', 'alexa-flash-briefing-feed' ); ?></h1>
+		<h1><?php _e( 'Alexa Flash Briefing Feed', 'alexa-flash-briefing-feed' ); ?></h1>
 		<?php
 		settings_fields( 'alexa-flash-briefing-feed' );
 		do_settings_sections( 'alexa-flash-briefing-feed' );

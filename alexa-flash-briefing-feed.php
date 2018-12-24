@@ -20,13 +20,19 @@ if ( ! defined( 'WPINC' ) ) {
 
 require_once( dirname( __FILE__ ) . '/vendor/autoload.php' );
 
-add_action( 'plugins_loaded', function() {
+add_action( 'plugins_loaded', function () {
+
+	load_plugin_textdomain(
+		'alexa-flash-briefing-feed',
+		false,
+		dirname( plugin_basename( __FILE__ ) ) . '/languages'
+	);
+
 	if ( is_admin() ) {
 		$admin = new Admin();
 		$admin->activate();
 	}
 	$api = new Api();
 	$api->register();
-//	do_redirect();
 } );
 
