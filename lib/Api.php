@@ -39,13 +39,8 @@ class Api {
 				'menu_name'             => __( 'Briefings', 'alexa-flash-briefing-feed' ),
 			],
 			'public'                => true,
-//			'hierarchical'          => false,
-//			'show_ui'               => true,
-//			'show_in_nav_menus'     => true,
 			'supports'              => [ 'title', 'editor' ],
 			'has_archive'           => true,
-//			'rewrite'               => true,
-//			'query_var'             => true,
 			'menu_icon'             => 'dashicons-controls-volumeon',
 			'show_in_rest'          => true,
 			'rest_base'             => 'briefing',
@@ -114,14 +109,29 @@ class Api {
 		foreach ( $posts as $post ) {
 			$mainText = wp_strip_all_tags( strip_shortcodes( $post->post_content, true ) );
 
-			$data       = [
+			$data = [
 				'uid'            => sprintf( 'urn:uuid:%s', wp_generate_uuid4( get_permalink( $post ) ) ),
 				'updateDate'     => get_post_modified_time( 'Y-m-d\TH:i:s.\0\Z', true, $post ),
 				'titleText'      => $post->post_title,
-				'mainText'       => $mainText,
-				'streamUrl'      => '',
 				'redirectionUrl' => get_permalink( $post ),
 			];
+
+			$pattern = "/(https:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)/";
+			if ( preg_match_all( $pattern, $mainText, $matches ) ) {
+				$data['mainText']  = '';
+				$data['streamUrl'] = esc_url_raw( $matches[0][0] );
+			} else {
+				$data['mainText'] = $mainText;
+			}
+
+			/**
+			 * Filters the response data
+			 *
+			 * @param array $data
+			 * @param WP_Post $post
+			 */
+			$data = apply_filters( 'afbf_response_data', $data, $post );
+
 			$response[] = $data;
 		}
 
