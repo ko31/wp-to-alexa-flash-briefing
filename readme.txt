@@ -25,7 +25,6 @@ You can publish your feed by itself. It's easy!
 * Provide endpoint URL for registering Alexa flash briefing skill.
 * It can check the endpoint URL from the setting screen.
 
-
 == Related Links ==
 
 * [Github](https://github.com/ko31/alexa-flash-briefing-feed)
@@ -51,8 +50,6 @@ If you want to register audio content, please enter the URL of the MP3 stream at
 = Can I use a block editor? =
 
 Yes. Both block editor and code editor are available.
-
-== Screenshots ==
 
 == Screenshots ==
 

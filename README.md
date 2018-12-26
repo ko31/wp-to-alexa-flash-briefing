@@ -25,7 +25,6 @@ You can publish your feed by itself. It's easy!
 * Provide endpoint URL for registering Alexa flash briefing skill.
 * It can check the endpoint URL from the setting screen.
 
-
 ## Related Links ##
 
 * [Github](https://github.com/ko31/alexa-flash-briefing-feed)
@@ -54,10 +53,12 @@ Yes. Both block editor and code editor are available.
 
 ## Screenshots ##
 
-## Screenshots ##
+### 1. A custom post type 'Briefing' for creating feeds is provided ###
+![A custom post type 'Briefing' for creating feeds is provided](http://ps.w.org/alexa-flash-briefing-feed/assets/screenshot-1.png)
 
-1. A custom post type 'Briefing' for creating feeds is provided
-2. Provide endpoint URL for registering Alexa flash briefing skill.
+### 2. Provide endpoint URL for registering Alexa flash briefing skill. ###
+![Provide endpoint URL for registering Alexa flash briefing skill.](http://ps.w.org/alexa-flash-briefing-feed/assets/screenshot-2.png)
+
 
 ## Changelog ##
 
