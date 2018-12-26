@@ -54,16 +54,21 @@ class Api {
 		 */
 		$args = apply_filters( 'afbf_post_type_args', $args );
 
-		register_post_type( 'briefing', $args );
+		register_post_type( 'afbf_briefing', $args );
 
-		register_taxonomy(
-			'briefing-cat',
-			'briefing',
-			array(
-				'label'        => __( 'Category', 'alexa-flash-briefing-feed' ),
-				'hierarchical' => true,
-			)
-		);
+		$args = [
+			'label'        => __( 'Category', 'alexa-flash-briefing-feed' ),
+			'hierarchical' => true,
+		];
+
+		/**
+		 * Filters the taxonomy arguments
+		 *
+		 * @param array $args
+		 */
+		$args = apply_filters( 'afbf_register_taxonomy_args', $args );
+
+		register_taxonomy( 'afbf_briefing_cat', 'afbf_briefing', $args );
 
 	}
 
