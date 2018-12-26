@@ -52,7 +52,7 @@ class Api {
 		 *
 		 * @param array $args
 		 */
-		$args = apply_filters( 'afbf_post_type_args', $args );
+		$args = apply_filters( 'afbf_register_post_type_args', $args );
 
 		register_post_type( 'afbf_briefing', $args );
 
