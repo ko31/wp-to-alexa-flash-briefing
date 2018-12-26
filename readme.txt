@@ -3,112 +3,64 @@ Contributors: ko31
 Donate link: https://go-sign.info
 Tags: alexa,amazon,flash briefing,feed
 Requires at least: 4.5
-Tested up to: 5.0.1
+Tested up to: 5.0.2
 Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+This is a plugin to create a feed of Alexa flash briefing skill in WordPress.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This is a plugin to create a feed of Alexa flash briefing skill in WordPress.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Please create `Briefing` posts just like the posts, and pages.
 
-A few notes about the sections above:
+You can publish your feed by itself. It's easy!
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+### FEATURES
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+* You can start using it immediately without initial setting.
+* A custom post type 'Briefing' for creating feeds is provided
+* Provide endpoint URL for registering Alexa flash briefing skill.
+* It can check the endpoint URL from the setting screen.
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+
+== Related Links ==
+
+* [Github](https://github.com/ko31/alexa-flash-briefing-feed)
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Upload the alexa-flash-briefing-feed directory to the plugins directory.
+1. Activate the plugin through the ‘Plugins’ menu in WordPress.
+1. 'Dashboard'->'Settings'->'Alexa Flash Briefing Feed'
+1. You can get an 'Endpoint URL'.
+1. Please register the URL in the Alexa Developer Console feed item.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= What is the output feed format? =
 
-An answer to that question.
+It is json format.
 
-= What about foo bar? =
+= Can I register audio contents? =
 
-Answer to foo bar dilemma.
+If you want to register audio content, please enter the URL of the MP3 stream at the beginning of the body.
+
+= Can I use a block editor? =
+
+Yes. Both block editor and code editor are available.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+== Screenshots ==
+
+1. A custom post type 'Briefing' for creating feeds is provided
+2. Provide endpoint URL for registering Alexa flash briefing skill.
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](https://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: https://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+* Initial Release
