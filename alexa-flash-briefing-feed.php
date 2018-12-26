@@ -2,12 +2,12 @@
 /**
  * Plugin Name:     Alexa Flash Briefing Feed
  * Plugin URI:      https://github.com/ko31/alexa-flash-briefing-feed
- * Description:     PLUGIN DESCRIPTION HERE
+ * Description:     This is a plugin to create a feed of Alexa flash briefing skill in WordPress.
  * Author:          ko31
  * Author URI:      https://go-sign.info
  * Text Domain:     alexa-flash-briefing-feed
  * Domain Path:     /languages
- * Version:         0.9.0
+ * Version:         1.0.0
  *
  * @package         Alexa_Flash_Briefing_Feed
  */
