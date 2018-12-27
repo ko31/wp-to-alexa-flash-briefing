@@ -18,14 +18,14 @@ Please create `Briefing` posts just like the posts, and pages.
 
 You can publish your feed by itself. It's easy!
 
-# Features #
+### Features
 
 * You can start using it immediately without initial setting.
 * A custom post type 'Briefing' for creating feeds is provided
 * Provide endpoint URL for registering Alexa flash briefing skill.
 * It can check the endpoint URL from the setting screen.
 
-# Endpoint URL #
+### Endpoint URL
 
 When your permalink structure setting is basic:
 
