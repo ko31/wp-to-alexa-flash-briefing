@@ -1,18 +1,18 @@
 <?php
 /**
- * Plugin Name:     Alexa Flash Briefing Feed
- * Plugin URI:      https://github.com/ko31/alexa-flash-briefing-feed
+ * Plugin Name:     WP To Alexa Flash Briefing
+ * Plugin URI:      https://github.com/ko31/wp-to-alexa-flash-briefing
  * Description:     This is a plugin to create a feed of Alexa flash briefing skill in WordPress.
  * Author:          ko31
  * Author URI:      https://go-sign.info
- * Text Domain:     alexa-flash-briefing-feed
+ * Text Domain:     wp-to-alexa-flash-briefing
  * Domain Path:     /languages
  * Version:         1.0.0
  *
- * @package         Alexa_Flash_Briefing_Feed
+ * @package         Wp_To_Alexa_Flash_Briefing
  */
 
-namespace Alexa_Flash_Briefing_Feed;
+namespace Wp_To_Alexa_Flash_Briefing;
 
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -27,7 +27,7 @@ register_activation_hook( __FILE__, function () {
 add_action( 'plugins_loaded', function () {
 
 	load_plugin_textdomain(
-		'alexa-flash-briefing-feed',
+		'wp-to-alexa-flash-briefing',
 		false,
 		dirname( plugin_basename( __FILE__ ) ) . '/languages'
 	);

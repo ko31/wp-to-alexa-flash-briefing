@@ -2,7 +2,7 @@
 /**
  * Class SampleTest
  *
- * @package Alexa_Flash_Briefing_Feed
+ * @package Wp_To_Alexa_Flash_Briefing
  */
 
 /**

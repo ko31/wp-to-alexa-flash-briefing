@@ -1,4 +1,4 @@
-=== Alexa Flash Briefing Feed ===
+=== WP to Alexa Flash Briefing ===
 Contributors: ko31
 Donate link: https://go-sign.info
 Tags: alexa,amazon,flash briefing,feed
@@ -27,13 +27,13 @@ You can publish your feed by itself. It's easy!
 
 == Related Links ==
 
-* [Github](https://github.com/ko31/alexa-flash-briefing-feed)
+* [Github](https://github.com/ko31/wp-to-alexa-flash-briefing)
 
 == Installation ==
 
-1. Upload the alexa-flash-briefing-feed directory to the plugins directory.
+1. Upload the wp-to-alexa-flash-briefing directory to the plugins directory.
 1. Activate the plugin through the ‘Plugins’ menu in WordPress.
-1. 'Dashboard'->'Settings'->'Alexa Flash Briefing Feed'
+1. 'Dashboard'->'Settings'->'WP to Alexa Flash Briefing'
 1. You can get an 'Endpoint URL'.
 1. Please register the URL in the Alexa Developer Console feed item.
 

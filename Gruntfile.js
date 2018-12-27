@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'alexa-flash-briefing-feed',
+				textdomain: 'wp-to-alexa-flash-briefing',
 			},
 			update_all_domains: {
 				options: {
@@ -32,8 +32,8 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
-					mainFile: 'alexa-flash-briefing-feed.php',
-					potFilename: 'alexa-flash-briefing-feed.pot',
+					mainFile: 'wp-to-alexa-flash-briefing.php',
+					potFilename: 'wp-to-alexa-flash-briefing.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true

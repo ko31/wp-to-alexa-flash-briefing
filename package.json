@@ -1,6 +1,6 @@
 
 {
-  "name": "alexa-flash-briefing-feed",
+  "name": "wp-to-alexa-flash-briefing",
   "version": "0.1.0",
   "main": "Gruntfile.js",
   "author": "ko31",

@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "Alexa_Flash_Briefing_Feed\\": "lib/"
+      "Wp_To_Alexa_Flash_Briefing\\": "lib/"
     }
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alexa_Flash_Briefing_Feed;
+namespace Wp_To_Alexa_Flash_Briefing;
 
 class Api {
 
@@ -12,31 +12,31 @@ class Api {
 	function init() {
 		$args = [
 			'labels'                => [
-				'name'                  => __( 'Briefings', 'alexa-flash-briefing-feed' ),
-				'singular_name'         => __( 'Briefing', 'alexa-flash-briefing-feed' ),
-				'all_items'             => __( 'All Briefings', 'alexa-flash-briefing-feed' ),
-				'archives'              => __( 'Briefing Archives', 'alexa-flash-briefing-feed' ),
-				'attributes'            => __( 'Briefing Attributes', 'alexa-flash-briefing-feed' ),
-				'insert_into_item'      => __( 'Insert into Briefing', 'alexa-flash-briefing-feed' ),
-				'uploaded_to_this_item' => __( 'Uploaded to this Briefing', 'alexa-flash-briefing-feed' ),
-				'featured_image'        => _x( 'Featured Image', 'briefing', 'alexa-flash-briefing-feed' ),
-				'set_featured_image'    => _x( 'Set featured image', 'briefing', 'alexa-flash-briefing-feed' ),
-				'remove_featured_image' => _x( 'Remove featured image', 'briefing', 'alexa-flash-briefing-feed' ),
-				'use_featured_image'    => _x( 'Use as featured image', 'briefing', 'alexa-flash-briefing-feed' ),
-				'filter_items_list'     => __( 'Filter Briefings list', 'alexa-flash-briefing-feed' ),
-				'items_list_navigation' => __( 'Briefings list navigation', 'alexa-flash-briefing-feed' ),
-				'items_list'            => __( 'Briefings list', 'alexa-flash-briefing-feed' ),
-				'new_item'              => __( 'New Briefing', 'alexa-flash-briefing-feed' ),
-				'add_new'               => __( 'Add New', 'alexa-flash-briefing-feed' ),
-				'add_new_item'          => __( 'Add New Briefing', 'alexa-flash-briefing-feed' ),
-				'edit_item'             => __( 'Edit Briefing', 'alexa-flash-briefing-feed' ),
-				'view_item'             => __( 'View Briefing', 'alexa-flash-briefing-feed' ),
-				'view_items'            => __( 'View Briefings', 'alexa-flash-briefing-feed' ),
-				'search_items'          => __( 'Search Briefings', 'alexa-flash-briefing-feed' ),
-				'not_found'             => __( 'No Briefings found', 'alexa-flash-briefing-feed' ),
-				'not_found_in_trash'    => __( 'No Briefings found in trash', 'alexa-flash-briefing-feed' ),
-				'parent_item_colon'     => __( 'Parent Briefing:', 'alexa-flash-briefing-feed' ),
-				'menu_name'             => __( 'Briefings', 'alexa-flash-briefing-feed' ),
+				'name'                  => __( 'Briefings', 'wp-to-alexa-flash-briefing' ),
+				'singular_name'         => __( 'Briefing', 'wp-to-alexa-flash-briefing' ),
+				'all_items'             => __( 'All Briefings', 'wp-to-alexa-flash-briefing' ),
+				'archives'              => __( 'Briefing Archives', 'wp-to-alexa-flash-briefing' ),
+				'attributes'            => __( 'Briefing Attributes', 'wp-to-alexa-flash-briefing' ),
+				'insert_into_item'      => __( 'Insert into Briefing', 'wp-to-alexa-flash-briefing' ),
+				'uploaded_to_this_item' => __( 'Uploaded to this Briefing', 'wp-to-alexa-flash-briefing' ),
+				'featured_image'        => _x( 'Featured Image', 'briefing', 'wp-to-alexa-flash-briefing' ),
+				'set_featured_image'    => _x( 'Set featured image', 'briefing', 'wp-to-alexa-flash-briefing' ),
+				'remove_featured_image' => _x( 'Remove featured image', 'briefing', 'wp-to-alexa-flash-briefing' ),
+				'use_featured_image'    => _x( 'Use as featured image', 'briefing', 'wp-to-alexa-flash-briefing' ),
+				'filter_items_list'     => __( 'Filter Briefings list', 'wp-to-alexa-flash-briefing' ),
+				'items_list_navigation' => __( 'Briefings list navigation', 'wp-to-alexa-flash-briefing' ),
+				'items_list'            => __( 'Briefings list', 'wp-to-alexa-flash-briefing' ),
+				'new_item'              => __( 'New Briefing', 'wp-to-alexa-flash-briefing' ),
+				'add_new'               => __( 'Add New', 'wp-to-alexa-flash-briefing' ),
+				'add_new_item'          => __( 'Add New Briefing', 'wp-to-alexa-flash-briefing' ),
+				'edit_item'             => __( 'Edit Briefing', 'wp-to-alexa-flash-briefing' ),
+				'view_item'             => __( 'View Briefing', 'wp-to-alexa-flash-briefing' ),
+				'view_items'            => __( 'View Briefings', 'wp-to-alexa-flash-briefing' ),
+				'search_items'          => __( 'Search Briefings', 'wp-to-alexa-flash-briefing' ),
+				'not_found'             => __( 'No Briefings found', 'wp-to-alexa-flash-briefing' ),
+				'not_found_in_trash'    => __( 'No Briefings found in trash', 'wp-to-alexa-flash-briefing' ),
+				'parent_item_colon'     => __( 'Parent Briefing:', 'wp-to-alexa-flash-briefing' ),
+				'menu_name'             => __( 'Briefings', 'wp-to-alexa-flash-briefing' ),
 			],
 			'public'                => true,
 			'supports'              => [ 'title', 'editor' ],
@@ -52,12 +52,12 @@ class Api {
 		 *
 		 * @param array $args
 		 */
-		$args = apply_filters( 'afbf_register_post_type_args', $args );
+		$args = apply_filters( 'w2afb_register_post_type_args', $args );
 
-		register_post_type( 'afbf_briefing', $args );
+		register_post_type( 'w2afb_briefing', $args );
 
 		$args = [
-			'label'        => __( 'Category', 'alexa-flash-briefing-feed' ),
+			'label'        => __( 'Category', 'wp-to-alexa-flash-briefing' ),
 			'hierarchical' => true,
 		];
 
@@ -66,14 +66,14 @@ class Api {
 		 *
 		 * @param array $args
 		 */
-		$args = apply_filters( 'afbf_register_taxonomy_args', $args );
+		$args = apply_filters( 'w2afb_register_taxonomy_args', $args );
 
-		register_taxonomy( 'afbf_briefing_cat', 'afbf_briefing', $args );
+		register_taxonomy( 'w2afb_briefing_cat', 'w2afb_briefing', $args );
 
 	}
 
 	function rest_api_init() {
-		register_rest_route( 'afbf/v1', '/briefings/', [
+		register_rest_route( 'w2afb/v1', '/briefings/', [
 			'methods'  => 'GET',
 			'callback' => [ $this, 'callback_api' ],
 		] );
@@ -81,7 +81,7 @@ class Api {
 
 	function callback_api( $request ) {
 		$args = [
-			'post_type'   => 'briefing',
+			'post_type'   => 'w2afb_briefing',
 			'post_status' => 'publish',
 			'numberposts' => 5,
 		];
@@ -89,7 +89,7 @@ class Api {
 		if ( ! empty( $request['category'] ) ) {
 			$args['tax_query'] = [
 				[
-					'taxonomy' => 'briefing-cat',
+					'taxonomy' => 'w2afb_briefing_cat',
 					'field'    => 'slug',
 					'terms'    => $request['category'],
 				]
@@ -101,7 +101,7 @@ class Api {
 		 *
 		 * @param array $args
 		 */
-		$args = apply_filters( 'afbf_get_posts_args', $args );
+		$args = apply_filters( 'w2afb_get_posts_args', $args );
 
 		$posts = get_posts( $args );
 
@@ -135,7 +135,7 @@ class Api {
 			 * @param array $data
 			 * @param WP_Post $post
 			 */
-			$data = apply_filters( 'afbf_response_data', $data, $post );
+			$data = apply_filters( 'w2afb_response_data', $data, $post );
 
 			$response[] = $data;
 		}

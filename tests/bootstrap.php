@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package Alexa_Flash_Briefing_Feed
+ * @package Wp_To_Alexa_Flash_Briefing
  */
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
@@ -23,7 +23,7 @@ require_once $_tests_dir . '/includes/functions.php';
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	require dirname( dirname( __FILE__ ) ) . '/alexa-flash-briefing-feed.php';
+	require dirname( dirname( __FILE__ ) ) . '/wp-to-alexa-flash-briefing.php';
 }
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
 
