@@ -2,9 +2,9 @@
 **Contributors:** ko31  
 **Donate link:** https://go-sign.info  
 **Tags:** alexa,amazon,flash briefing,feed  
-**Requires at least:** 4.5  
+**Requires at least:** 4.7  
 **Tested up to:** 5.0.2  
-**Stable tag:** 0.1.0  
+**Stable tag:** 1.0.0  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -18,12 +18,26 @@ Please create `Briefing` posts just like the posts, and pages.
 
 You can publish your feed by itself. It's easy!
 
-### FEATURES
+# Features #
 
 * You can start using it immediately without initial setting.
 * A custom post type 'Briefing' for creating feeds is provided
 * Provide endpoint URL for registering Alexa flash briefing skill.
 * It can check the endpoint URL from the setting screen.
+
+# Endpoint URL #
+
+When your permalink structure setting is basic:
+
+`https://example.com/index.php?rest_route=/w2afb/v1/briefings`
+
+For other settings:
+
+`https://example.com/wp-json/w2afb/v1/briefings`
+
+If you want to provide multiple endpoints, you can create them using the categories as follows:
+
+`/wp-json/w2afb/v1/briefings?category=yourcategoryslug`
 
 ## Related Links ##
 
