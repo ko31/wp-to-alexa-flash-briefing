@@ -59,6 +59,7 @@ class Api {
 		$args = [
 			'label'        => __( 'Category', 'wp-to-alexa-flash-briefing' ),
 			'hierarchical' => true,
+			'show_in_rest' => true,
 		];
 
 		/**
