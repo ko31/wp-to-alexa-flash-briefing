@@ -1,11 +1,11 @@
 # Copyright (C) 2018 ko31
-# This file is distributed under the same license as the WP To Alexa Flash Briefing package.
+# This file is distributed under the same license as the WP to Alexa Flash Briefing package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP To Alexa Flash Briefing 1.0.0\n"
+"Project-Id-Version: WP to Alexa Flash Briefing 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/wp-to-alexa-flash-briefing\n"
-"POT-Creation-Date: 2018-12-27 22:00:04+00:00\n"
+"POT-Creation-Date: 2018-12-27 23:31:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: lib/Admin.php:14 lib/Admin.php:15 lib/Admin.php:17 lib/Admin.php:60
+#. Plugin Name of the plugin/theme
 msgid "WP to Alexa Flash Briefing"
 msgstr ""
 
@@ -123,10 +123,6 @@ msgstr ""
 
 #: lib/Api.php:60
 msgid "Category"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "WP To Alexa Flash Briefing"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

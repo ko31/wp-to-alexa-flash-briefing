@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     WP To Alexa Flash Briefing
+ * Plugin Name:     WP to Alexa Flash Briefing
  * Plugin URI:      https://github.com/ko31/wp-to-alexa-flash-briefing
  * Description:     This is a plugin to create a feed of Alexa flash briefing skill in WordPress.
  * Author:          ko31
